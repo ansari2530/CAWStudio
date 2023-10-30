@@ -26,13 +26,13 @@ test("CAW Assesment Test Case", async ({page,}) =>
 
 
     //Extracting the Table text after data has been populated in the same
-    const abc = await page.locator ("[id='tablehere']").innerText()
+    const tablecontents = await page.locator ("[id='tablehere']").innerText()
 
 
     //Printing the Table extracted value in the console
-    console.log(abc)
+    console.log(tablecontents)
 
-if (abc.indexOf( jsonObject)) {
+if (tablecontents.indexOf( jsonObject)) {
 
     //Using "IndexOf" in order to check the entered value and displayed value
     console.log ("table verified")
